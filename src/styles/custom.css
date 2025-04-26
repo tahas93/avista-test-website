@@ -1,0 +1,119 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #141718;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* START: custom swiper css */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* END: custom swiper css */
+
+/* START: MAIN SLIDER STYLE */
+
+.swiper.main-swiper .swiper-button-prev,
+.swiper.main-swiper .swiper-button-next {
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.swiper.main-swiper .swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 30px);
+  right: auto;
+}
+
+.swiper.main-swiper .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 30px);
+  left: auto;
+}
+
+.swiper.main-swiper .swiper-button-prev:after {
+  content: url('/svg/arrow-left.svg');
+}
+
+.swiper.main-swiper .swiper-button-next:after {
+  content: url('/svg/arrow-right.svg');
+}
+
+.swiper.main-swiper .swiper-pagination {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.swiper.main-swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: #FEFEFE;
+  opacity: 1;
+  margin: 0 8px;
+  border-radius: 20px;
+  transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+
+.swiper.main-swiper .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+.swiper.main-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #FEFEFE;
+  width: 30px;
+  transition-delay: 0s;
+}
+
+/* END: MAIN SLIDER STYLE */
+
+
+.scroll-swiper.swiper {
+  padding-bottom: 15px;
+}
+
+.scroll-swiper .swiper-horizontal>.swiper-scrollbar,
+.scroll-swiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: var(--swiper-scrollbar-bottom, 0px);
+}
+
+@media (max-width:1024px) {
+
+  .swiper.main-swiper .swiper-button-prev,
+  .swiper.main-swiper .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  .cs-hover-show {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .cs-img-block:hover .cs-hover-show {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .swiper.main-swiper {
+    height: 550px;
+  }
+
+}
